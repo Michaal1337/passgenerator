@@ -5,7 +5,6 @@ const inputNumber = document.querySelector('.passbox__func-input-range-inputNumb
 const slider = document.querySelector('.passbox__func-input-range-slider')
 const parag = document.querySelector('.passbox__func-text')
 
-
 function generateChar(length2) {
 	const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-=+'
 	let result = ''
@@ -20,7 +19,7 @@ function generateChar(length2) {
 function copy() {
 	const copyText = input
 	copyText.select()
-	copyText.setSelectionRange(0, 99999)
+	copyText.setSelectionRange(0, 25)
 	navigator.clipboard
 		.writeText(copyText.value)
 		.then(() => {
@@ -45,8 +44,6 @@ function generatePass() {
 	generateChar(inputNumber.value)
 	parag.classList.remove('copied')
 }
-
-
 
 genBtn.addEventListener('click', generatePass)
 copyBtn.addEventListener('click', copy)
