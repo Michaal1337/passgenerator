@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="passbox">
+        <div class="passbox__text">
+            <h2 class="passbox__text-title">Password Generator</h2>
+            <p class="passbox__text-info">Create strong random password to protect your account</p>
+        </div>
+        <div class="passbox__func">
+            <input type=g"text" class="passbox__func-input">
+            <p class="passbox__func-text">Password Copied</p>
+            <div class="passbox__func-input-range">
+                <p>Password length:</p>
+
+                <input class="passbox__func-input-range-inputNumber" type="number" min="5" max="25" value="5">
+
+                <Input class="passbox__func-input-range-slider" type="range" value="5" min="5" max="25"></Input>
+
+            </div>
+            <div class="passbox__func-btns">
+                <button class="passbox__func-btns-generate btn glass">generate</button>
+                <button class="passbox__func-btns-copy btn glass">copy</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
