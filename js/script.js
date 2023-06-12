@@ -24,6 +24,8 @@ function copy() {
 		.writeText(copyText.value)
 		.then(() => {
 			parag.classList.add('copied')
+			parag.textContent = "Password copied"
+			parag.classList.remove('generated')
 		})
 		.catch(() => {
 			alert('something went wrong')
@@ -43,6 +45,8 @@ function changes() {
 function generatePass() {
 	generateChar(inputNumber.value)
 	parag.classList.remove('copied')
+	parag.textContent = "Password created"
+	parag.classList.add('generated')
 }
 
 genBtn.addEventListener('click', generatePass)
