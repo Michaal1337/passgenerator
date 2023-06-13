@@ -114,12 +114,17 @@ body {
 
 .copied {
   visibility: visible;
-  color: tomato;
+  color: greenyellow;
 }
 
 .generated {
   visibility: visible;
   color: cyan;
+}
+
+.wrong {
+  visibility: visible;
+  color: tomato;
 }
 
 /* CSS *//*# sourceMappingURL=style.css.map */

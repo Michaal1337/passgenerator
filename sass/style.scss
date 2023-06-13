@@ -76,7 +76,7 @@ body {
 
 		&-text {
 			visibility: hidden;
-			
+
 			text-align: center;
 			margin-top: 0.5em;
 			font-size: 1.3rem;
@@ -126,11 +126,16 @@ body {
 
 .copied {
 	visibility: visible;
-	color: tomato;
+	color: greenyellow;
 }
 .generated {
 	visibility: visible;
 	color: cyan;
+}
+
+.wrong {
+	visibility: visible;
+	color: tomato;
 }
 // #rangeValue {
 // 	position: relative;

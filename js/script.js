@@ -23,9 +23,15 @@ function copy() {
 	navigator.clipboard
 		.writeText(copyText.value)
 		.then(() => {
-			parag.classList.add('copied')
-			parag.textContent = "Password copied"
-			parag.classList.remove('generated')
+			if (inputNumber.value < 26 && inputNumber.value >= 5 && input.value !== '') {
+				parag.classList.add('copied')
+				parag.textContent = 'Password copied'
+				parag.classList.remove('generated')
+				parag.classList.remove('wrong')
+			} else {
+				parag.classList.remove('copied')
+				parag.classList.remove('generated')
+			}
 		})
 		.catch(() => {
 			alert('something went wrong')
@@ -43,13 +49,34 @@ function changes() {
 }
 
 function generatePass() {
-	generateChar(inputNumber.value)
-	parag.classList.remove('copied')
-	parag.textContent = "Password created"
-	parag.classList.add('generated')
+	if (inputNumber.value < 26 && inputNumber.value >= 5) {
+		generateChar(inputNumber.value)
+		parag.classList.remove('copied')
+		parag.textContent = 'Password created'
+		parag.classList.add('generated')
+		parag.classList.remove('wrong')
+	} else {
+		parag.textContent = 'Wrong value'
+		parag.classList.remove('copied')
+		parag.classList.remove('generated')
+		parag.classList.add('wrong')
+	}
+}
+
+// input.oninput = function () {
+// 	if (this.value.max > 25) {
+
+// 	}
+// }
+
+input.oninput = function () {
+	if (this.value.length > 4) {
+		this.value = this.value.slice(0, 4)
+	}
 }
 
 genBtn.addEventListener('click', generatePass)
 copyBtn.addEventListener('click', copy)
 slider.addEventListener('mousemove', changes)
+slider.addEventListener('touchmove', changes)
 inputNumber.addEventListener('change', changes)
