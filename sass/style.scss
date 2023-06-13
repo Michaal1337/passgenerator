@@ -59,7 +59,9 @@ body {
 			&-range {
 				color: #ffffffda;
 				display: flex;
-				justify-content: space-between;
+				flex-direction: column;
+				align-items: center;
+				// justify-content: center;
 				margin-top: 0.5em;
 				font-size: 1.3rem;
 				&-inputNumber {
@@ -67,9 +69,11 @@ body {
 					border: 1px solid #fff;
 					border-radius: 8px;
 					text-align: center;
+					width: 20%;
+					margin: 10px 0;
 				}
 				&-slider {
-					width: 30%;
+					width: 40%;
 				}
 			}
 		}
@@ -136,6 +140,26 @@ body {
 .wrong {
 	visibility: visible;
 	color: tomato;
+}
+
+
+
+@media (min-width: 400px) {
+	.passbox__func-input-range {
+		
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		
+		&-inputNumber {
+		
+			// width: 20%;
+			margin: 0 0;
+		}
+		&-slider {
+			width: 30%;
+		}
+	}
 }
 // #rangeValue {
 // 	position: relative;
